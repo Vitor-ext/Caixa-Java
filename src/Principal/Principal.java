@@ -4,7 +4,7 @@
  */
 package Principal;
 
-import Menu.Menu;
+import MenuPrincipal.MenuPrincipal;
 
 
 /**
@@ -19,9 +19,9 @@ public class Principal {
     public static void main(String[] args) {
         // TODO code application logic here
     
-        Menu objMenu = new Menu();
+        MenuPrincipal  objMenuPrincipal = new MenuPrincipal();
         
-        objMenu.executaMenu();  
+        objMenuPrincipal.executaMenuPrincipal();  
         
         
     }

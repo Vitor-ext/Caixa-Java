@@ -5,6 +5,7 @@
 package Menu;
 
 import Conta.Conta;
+import MenuPrincipal.MenuPrincipal;
 import java.util.Scanner;
 
 public class Menu {
@@ -45,6 +46,9 @@ public class Menu {
             default: 
                 System.out.println("O Valor digitado não atende aos requisitos propostos");       
         }
+            
+        MenuPrincipal objMenuPrincipal = new MenuPrincipal();
+        objMenuPrincipal.executaMenuPrincipal();   
     }
 
 }

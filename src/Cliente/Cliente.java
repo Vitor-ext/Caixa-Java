@@ -6,6 +6,7 @@ package Cliente;
 
 import java.util.Scanner;
 import Menu.Menu;
+import NewConta.NewConta;
 
 /**
  *
@@ -23,6 +24,13 @@ public class Cliente {
     Scanner objScanner = new Scanner(System.in);
 
         public void cadastro () {
+            
+        System.out.println("######### É BOM TER VOCÊ AQUI  ##########");
+        System.out.println("#                                       #");
+        System.out.println("# AQUI REALIZAREMOS SEU CADASTRO !!     #");
+        System.out.println("# SOLICITAREMOS ALGUNS DADOS !          #");
+        System.out.println("#                                       #");
+        System.out.println("#########################################");
 
         System.out.println("Informe seu nome completo");    
         Nome = objScanner.next();
@@ -40,16 +48,21 @@ public class Cliente {
         Endereco = objScanner.next();  
 
         
-        if(Nome=="" && CPF=="" && RG=="" && Endereco==""){
+        if("".equals(Nome) && "".equals(CPF) && "".equals(RG) && "".equals(Endereco)){
 
             // Criar rotas para inserir dados no Banco (Futuro);
 
-            Menu objMenu = new Menu();
-            objMenu.executaMenu();  
+            
+            NewConta objNewConta = new NewConta();
+            objNewConta.cadastro();
+            
+         /*   Menu objMenu = new Menu();
+            objMenu.executaMenu();  */
 
         }
         else{
             System.out.println("Preencha todos os dados");
+            return;
         }
 
 
