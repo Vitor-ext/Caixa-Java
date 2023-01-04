@@ -191,40 +191,37 @@ public class interface1 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        System.out.println("Você quer realizar um deposito ?");
-        display.setText("Você quer realizar um deposito ?");                              
+        // TODO add your handling code here:      
+        Conta objConta = new Conta();
+        int valor = 4525;
+        objConta.geraDeposito(valor);
+        String res = objConta.resDeposito.toString();
+        System.out.println(res);
+        display.setText(res);                          
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        System.out.println("Você quer realizar um Saque ?");
-        display.setText("Você quer realizar um Saque ?");
+        // TODO add your handling code here:        
+        Conta objConta = new Conta();
+        int valor = 3685;
+        objConta.geraSaque(valor);
+        String res = objConta.resSaque.toString();
+        System.out.println(res);
+        display.setText(res); 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        //System.out.println("Você quer visualizar seu saldo ?");
-        //teste.setText("Você quer visualizar seu saldo ?");
-        
         Conta objConta = new Conta();
         objConta.consultaSaldo();
-        String res = objConta.res.toString();
+        String res = objConta.resSaldo.toString();
         System.out.println(res);
         display.setText(res);   
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        System.out.println("Você quer Sair ?");
         display.setText("Obrigado por utilizar nosso Banco !");
-        try {
-            sleep(3000);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(interface1.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        display.setText("Bem vindo ao Banco do Senai !");
-        
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -233,7 +230,7 @@ public class interface1 extends javax.swing.JFrame {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-        System.out.println("Bem vindo ao Banco do Senai !");
+        //System.out.println("Bem vindo ao Banco do Senai !");  //Teste Unitario
         display.setText("Bem vindo ao Banco do Senai !");
     }//GEN-LAST:event_jButton6ActionPerformed
 
