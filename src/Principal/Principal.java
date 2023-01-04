@@ -5,6 +5,7 @@
 package Principal;
 
 import MenuPrincipal.MenuPrincipal;
+import interface1.interface1;
 
 
 /**
@@ -20,8 +21,12 @@ public class Principal {
         // TODO code application logic here
     
         MenuPrincipal  objMenuPrincipal = new MenuPrincipal();
+        objMenuPrincipal.executaMenuPrincipal();
         
-        objMenuPrincipal.executaMenuPrincipal();  
+        
+        
+        //interface1 objinterface1 = new interface1();
+        //objinterface1.interface1();
         
         
     }

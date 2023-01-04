@@ -4,7 +4,7 @@
  */
 package Conexao;
 
-import java.sql.DriverManager;
+/**import java.sql.DriverManager
 
 public class Conexao {
     
@@ -33,4 +33,4 @@ public class Conexao {
         
     } 
     
-}
+}*/

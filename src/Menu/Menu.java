@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class Menu {
 
-    public void executaMenu() {
+    public float executaMenu() {
         System.out.println("###### MENU ######");
         System.out.println("ESCOLHA UMA OPÇÃO: ");
         System.out.println("1  - SALDO");
@@ -34,7 +34,8 @@ public class Menu {
                 valor = objScanner.nextFloat();
                 objConta.geraDeposito(valor);
                 objConta.consultaSaldo();
-                break;
+                return (valor);
+                //break;
 
             case 3:
                 System.out.println("Qual o valor do saque que deseja fazer: ");
@@ -49,6 +50,7 @@ public class Menu {
             
         MenuPrincipal objMenuPrincipal = new MenuPrincipal();
         objMenuPrincipal.executaMenuPrincipal();   
+        return 0;
     }
 
 }
