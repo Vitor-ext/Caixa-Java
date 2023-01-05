@@ -4,33 +4,47 @@
  */
 package Conexao;
 
-/**import java.sql.DriverManager
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class Conexao {
     
-    public void conexaoBanco() {
+    private String servidor;
+    private String banco;
+    private String usuario;
+    private String senha;
+    private Connection conexao;
+    
+    
+    public void conexaoBanco(){
         
-        Connection conexao = null;
+        this.servidor  = "localhost";
+        this.banco = "BANCO";
+        this.usuario = "root";
+        this.senha = "bcd127";       
+    }
         
+     
+    public boolean Connect(){
+             
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            conexao = DriverManager.getConnection("jdbc:mysql://localhost/banco","root","");
-            ResultSet rsCliente = conexao.createStatement().executeQuery("SELECT * FROM CLIENTE");
-            while(rsCliente.next()){
-                System.out.println("Nome: " + rsCliente.getString("nome"));
-            }
-        }
-        catch (ClassNotFoundException ex){
-            System.out.println("DRIVER DO BANCO DE DADOS NÃO LOCALIZADO");
-        }   
+            this.conexao = DriverManager.getConnection("jdbc:mysql://"+this.servidor+"/"+this.banco,this.usuario,this.senha);
+            return true;
+        } 
         catch (SQLException ex){
             System.out.println("OCORREU UM ERRO AO ACESSAR O BANDO DE DADOS");
-        }  finally{      
+            return false;
+        }  /*finally{      
             if (conexao != null){
                 conexao.close();
             }
-        }
-        
+        }     **/       
     } 
     
-}*/
+    public Connection getConnection(){
+        return conexao;
+    }
+    
+}
